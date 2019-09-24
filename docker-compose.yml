@@ -14,7 +14,7 @@ services:
       - SERVICE_TO_PROTECT=tomcat
       - SERVICE_PORT=8080
 ##      ####### SHIBBOLETH SECTION #######
-      - HOSTNAME=${DNS_NAME}
+      - Domain_Name=${DNS_NAME}
       - IDP_ENTITY_ID=${IDP_ENTITY_ID}
       - IDP_METADATA_URL=${IDP_METADATA_URL}
     ports:
