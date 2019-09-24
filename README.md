@@ -20,14 +20,11 @@ After replacing the variables run the below command.
 docker build -t <<tag_name>> .
 
 # running the Image using docker-compose.yml
-
+```
 version: '2.2'
-
 volumes:
   couchbase-data:
-
 services:
-
   Apache_Shib:
     image: ubuntu_shib
     container_name: ubuntu_shib
@@ -41,7 +38,7 @@ services:
     ports:
       - 80:80
       - 443:443
-      
+  ```    
   after pulling the image on the machine just run below command
   
   docker-compose up -d
