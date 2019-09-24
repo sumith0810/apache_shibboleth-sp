@@ -1,4 +1,4 @@
-#OverView of Apache Shibboleth-sp
+# OverView of Apache Shibboleth-sp
 
 This Docker image is Apache2 with Shibboleth SP installed running on Ubuntu.
 
@@ -7,7 +7,7 @@ This image can be used as a base image overriding the configuration with local c
 Ports 80 and 443 are exposed for traffic.
 
 
-#Building the Image using Dockerfile
+# Building the Image using Dockerfile
 
 To build the image run below command
 
@@ -19,7 +19,7 @@ After replacing the variables run the below command.
 
 docker build -t <<tag_name>> .
 
-#running the Image using docker-compose.yml
+# running the Image using docker-compose.yml
 
 version: '2.2'
 
@@ -33,10 +33,8 @@ services:
     container_name: ubuntu_shib
     build: .
     environment:
-##      ####### APACHE SECTION #######
       - SERVICE_TO_PROTECT=tomcat
       - SERVICE_PORT=8080
-##      ####### SHIBBOLETH SECTION #######
       - HOSTNAME=${your DNS_NAME}
       - IDP_ENTITY_ID=${your IDP_ENTITY_ID}
       - IDP_METADATA_URL=${your IDP_METADATA_URL}
